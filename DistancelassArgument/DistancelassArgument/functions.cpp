@@ -37,6 +37,7 @@ public:
 	
 };
 int Distance::count = 0;//share variable 
+void showCurrentCount(Distance d1);
 int main()
 {
 	Distance d1, d2(1,15);
@@ -79,4 +80,8 @@ Distance Distance::add_dist_tome(Distance d1)
 	}
 	temp.feet = feet + d1.feet;
 	return temp;
+}
+void showCurrentCount(Distance d1)
+{
+	cout << " the current count in my super class is " << d1.getCount() << endl;
 }
