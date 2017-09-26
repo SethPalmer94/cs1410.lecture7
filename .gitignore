@@ -243,3 +243,5 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/DistancelassArgument/DistancelassArgument/DistancelassArgument.vcxproj.filters
+/DistancelassArgument/DistancelassArgument/DistancelassArgument.vcxproj
