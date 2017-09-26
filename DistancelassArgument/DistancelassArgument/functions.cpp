@@ -6,9 +6,10 @@ class Distance
 private:
 	int feet;
 	float inches;
+	static int count;//every object share this variable 
 public:
-	Distance():feet(0),inches(0) {}
-	Distance(int ft, float in) :feet(ft), inches(in) {}
+	Distance() :feet(0), inches(0) { count++; }
+	Distance(int ft, float in) :feet(ft), inches(in) { count++; }
 
 	void setDist(int f, float i)
 	{
@@ -27,10 +28,15 @@ public:
 	{
 		cout << "feet: " << feet << " and inches: " << inches << endl;
 	}
+	int getCount()
+	{
+		return count;
+	}
 	void add_dist(Distance d1, Distance d2);
 	Distance add_dist_tome(Distance d1);
 	
 };
+int Distance::count = 0;//share variable 
 int main()
 {
 	Distance d1, d2(1,15);
@@ -42,6 +48,9 @@ int main()
 	d4.showDist();
 	d4.add_dist_tome(d2);
 	d4.showDist();
+	cout << "the count is " << d4.getCount() << endl;
+
+
 
 
 
