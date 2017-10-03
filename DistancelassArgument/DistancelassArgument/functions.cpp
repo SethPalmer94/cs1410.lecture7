@@ -50,6 +50,7 @@ int main()
 	d4.add_dist_tome(d2);
 	d4.showDist();
 	cout << "the count is " << d4.getCount() << endl;
+	showCurrentCount(d4);
 
 
 
